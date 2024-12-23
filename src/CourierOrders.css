@@ -1,0 +1,64 @@
+/* CourierOrders.css */
+
+.orders-container {
+    padding: 20px;
+  }
+  
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .orders-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .orders-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .actions button,
+  .actions select {
+    margin-right: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .accept-btn {
+    background-color: #1864bc;
+    color: white;
+  }
+  
+  .decline-btn {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .accept-btn:hover,
+  .decline-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .actions select {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
