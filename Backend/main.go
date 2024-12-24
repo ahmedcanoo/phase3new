@@ -57,7 +57,7 @@ type Admin struct {
 var client *mongo.Client
 
 func main() {
-	clientOptions := options.Client().ApplyURI("mongodb://mongodb:27017")
+	clientOptions := options.Client().ApplyURI("mongodb+srv://ahmedtarek123120:lWHFgRNiG82KGC2c@cluster0.49tbu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 	//clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
 	var err error
@@ -92,6 +92,10 @@ func main() {
 	router.HandleFunc("/api/admin/orders/{orderId}/assign-courier", AssignCourierToOrder).Methods("POST")
 	router.HandleFunc("/api/admin/orders/{orderId}/reassign-courier", ReassignCourierToOrder).Methods("PUT")
 	router.HandleFunc("/api/courier/orders", GetOrdersAssignedToCourier).Methods("GET")
+	router.HandleFunc("/api/health", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("OK"))
+	}).Methods("GET")
 
 	corsHandler := handlers.CORS(
 		// handlers.AllowedOrigins([]string{"http://localhost:3000"}),
